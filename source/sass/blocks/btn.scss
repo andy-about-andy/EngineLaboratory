@@ -1,0 +1,98 @@
+.btn {
+  display: inline-block;
+  padding: 20px 54px;
+  font-family: $ff-manropebold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: $color-default-white;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity $trans-default;
+
+  &--red {
+    background-color: $color-torch-red;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+}
+
+.btn--all-programmes {
+  width: 100%;
+  margin-top: 18px;
+  padding: 15px;
+  color: $color-default-green;
+  border: 1px solid rgba(37, 150, 9, 0.35);
+  border-radius: 3px;
+}
+
+.btn--all-programmes:hover {
+  background-color: $color-default-green;
+  color: $color-default-white;
+}
+
+.btn--all-programmes:active {
+  opacity: 0.5;
+}
+
+.btn--more-info {
+  max-width: 100%;
+  padding: 13px;
+  background-color: $color-default-green;
+  border-radius: 3px;
+}
+
+.btn--add-course {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 1px;
+    background-color: $color-default-green;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
+.btn--pagination-show {
+  position: relative;
+  display: block;
+  margin: 5px auto;
+  padding: 25px;
+  color: $color-default-black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 47%;
+    right: -10px;
+    width: 17px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/svg/icon-refresh.svg");
+    background-repeat: no-repeat;
+  }
+}
