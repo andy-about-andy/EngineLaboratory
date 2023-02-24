@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт двигателей - Engine Laboratory</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/manrope.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/manrope-extrabold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="container main-header">
+          <div class="main-header__wrap">
+            <div class="main-header__top">
+              <div class="main-header__logo-inner">
+                <a class="main-header__link-logo">
+                  <svg class="main-header__logo" aria-hidden="true" focusable="false" width="213" height="50">
+                    <use href="img/sprite.svg#icon-logo-desktop"></use>
+                  </svg>
+                </a>
+                <p class="main-header__logo-text">Ремонтируем двигатели<br>Hyundai и Kia с 2012 года</p>
+              </div>
+              <div class="main-header__top-inner">
+                <div class="main-header__address">
+                  <picture>
+                    <source width="35" height="35" media="(min-width: 993px)" type="image/webp" srcset="img/icon-address-desktop.webp 1x, img/icon-address-desktop@2x.webp 2x">
+                    <source width="65" height="65" type="image/webp" srcset="img/icon-address-mobile.webp 1x, img/icon-address-mobile@2x.webp 2x">
+                    <img loading="lazy" width="35" height="35" src="img/icon-address-desktop.png" srcset="img/icon-address-desktop@2x.png 2x" alt="Адрес автоцентра.">
+                  </picture>
+                  <p class="main-header__address-text">Адрес автоцентра: Москва,</p>
+                  <p class="main-header__address-text main-header__address-text--mobile">Шоссейный проезд, с4 а/2</p>
+                </div>
+                <div class="main-header__address-link-map">
+                  <svg class="main-header__address-link-icon" aria-hidden="true" focusable="false" width="12" height="15">
+                    <use href="img/sprite.svg#icon-anchor"></use>
+                  </svg>
+                  <p class="main-header__address-link-text">Смотреть на карте</p>
+                </div>
+                <div class="main-header__calculation">
+                  <svg class="main-header__calculation-icon" aria-hidden="true" focusable="false" width="35" height="35">
+                    <use href="img/sprite.svg#icon-calculation-desktop"></use>
+                  </svg>
+                  <div class="main-header__calculation-text-wrap">
+                    <p class="main-header__calculation-text">Рассчитать стоимость</p>
+                    <p class="main-header__calculation-text">ремонта за 45 сек</p>
+                  </div>
+                </div>
+                <div class="main-header__social">
+                  <p class="main-header__social-text main-header__social-text--desktop">Задайте вопрос,<br>мы сейчас онлайн</p>
+                  <div class="main-header__social-text-wrap">
+                    <p class="main-header__social-text main-header__social-text--mobile">Есть вопрос?</p>
+                    <p class="main-header__social-text main-header__social-text--mobile-bold">Задайте его нашему мастеру онлайн</p>
+                    <ul class="main-header__social-icon-list">
+                      <li class="main-header__social-icon-item">
+                        <a class="main-header__social-link-whatsapp" href="#">
+                          <svg class="main-header__social-link main-header__social-link--desktop" aria-hidden="true" focusable="false" width="35" height="35">
+                            <use href="img/sprite.svg#social-icon-whatsapp-desktop"></use>
+                          </svg>
+                          <svg class="main-header__social-link main-header__social-link--mobile" aria-hidden="true" focusable="false" width="32" height="32">
+                            <use href="img/sprite.svg#social-icon-whatsapp-mobile"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="main-header__social-icon-item">
+                        <a class="main-header__social-link-telegram" href="#">
+                          <svg class="main-header__social-link main-header__social-link--desktop" aria-hidden="true" focusable="false" width="35" height="35">
+                            <use href="img/sprite.svg#social-icon-telegram-desktop"></use>
+                          </svg>
+                          <svg class="main-header__social-link main-header__social-link--mobile" aria-hidden="true" focusable="false" width="32" height="32">
+                            <use href="img/sprite.svg#social-icon-telegram-mobile"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="main-header__social-icon-item">
+                        <a class="main-header__social-link-viber" href="#">
+                          <svg class="main-header__social-link" aria-hidden="true" focusable="false" width="35" height="35">
+                            <use href="img/sprite.svg#social-icon-viber-desktop"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="main-header__contacts">
+                <address>
+                  <ul class="main-header__contacts-list">
+                    <li class="main-header__contacts-item">
+                      <p class="main-header__contacts">Звоните Пн-Сб 10:00 - 21:00</p>
+                    </li>
+                    <li class="main-header__contacts-item">
+                      <a class="main-header__link-phone" href="tel:+79251033330">+7 (925) 103 33 30</a>
+                      <svg class="main-header__contacts-icon" aria-hidden="true" focusable="false" width="9" height="5">
+                        <use href="img/sprite.svg#arrow-phone-number"></use>
+                      </svg>
+                    </li>
+                    <li class="main-header__contacts-item">
+                      <a class="main-header__button" href="#">Заказать звонок</a>
+                      <svg class="main-header__contacts-icon" aria-hidden="true" focusable="false" width="6" height="6">
+                        <use href="img/sprite.svg#icon-phone"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </address>
+              </div>
+            </div>
+            <nav class="main-nav">
+              <h2 class="visually-hidden">Навигация по сайту</h2>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Услуги</a>
+                  <div class="main-nav__inner main-nav__inner--mobile">
+                    <a class="main-nav__link main-nav__link--services" href="#">Ремонт дивигателей KIA</a>
+                    <a class="main-nav__link main-nav__link--services" href="#">Ремонт дивигателей Hyundai</a>
+                  </div>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Модели двигателей</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Отзывы</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Стоимость</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Примеры работ</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Полезные статьи</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">О компании</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="advantages">
+          <div class="container advantages__wrap">
+            <h1>Профессиональный ремонт <br>двигателей HYUNDAI и KIA <br>с гарантией 1 год за 4-7 дней</h1>
+            <span>в специализированном автосервисе полного цикла</span>
+            <div class="advantages__button">
+              <div class="advantages__button-inner">
+                <a class="btn btn--advantages" href="#">Начать расчет стоимости ремонта вашего двигателя</a>
+                <svg class="advantages__button-icon" aria-hidden="true" focusable="false" width="22" height="22">
+                  <use href="img/sprite.svg#arrow-button-calculation"></use>
+                </svg>
+              </div>
+              <div class="advantages__button-inner">
+                <svg class="advantages__button-icon" aria-hidden="true" focusable="false" width="30" height="30">
+                  <use href="img/sprite.svg#icon-whatsapp"></use>
+                </svg>
+                <a class="btn btn--advantages btn--advantages-whatsapp" href="#">Узнайте стоимость по WhatsApp</a>
+              </div>
+            </div>
+            <div class="advantages__inner">
+              <h2 class="visually-hidden">Наши преимущества!</h2>
+              <ul class="advantages__list">
+                <li class="advantages__item">
+                  <p class="advantages__item-text">Без предоплаты.</p>
+                  <span>Оплата после ремонта</span>
+                </li>
+                <li class="advantages__item">
+                  <span class="advantages__item-text">Работаем официально</span>
+                  <span>с оформлением заказ-нарядов и чеков</span>
+                </li>
+                <li class="advantages__item">
+                  <p class="advantages__item-text">Оригинальные запчасти</p>
+                </li>
+                <li class="advantages__item">
+                  <span class="advantages__item-text">Лучшие цены на рынке</span>
+                  <span>благодаря прямым поставкам запчастей и собственному цеху механической обработки</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- <footer>
+        <div class="container"></div>
+      </footer> -->
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

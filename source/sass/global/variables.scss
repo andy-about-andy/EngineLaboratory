@@ -1,0 +1,41 @@
+// Colors
+// ---------------------------------
+$color-default-black:               #3e3e3e;
+$color-default-white:               #ffffff;
+$color-white:                       #f7f7f7;
+$color-default-green:               #259609;
+
+// Project palette
+// ---------------------------------
+
+$color-neon-blue:                   #2c39f2;
+$color-torch-red:                   #ff1553;
+
+// Viewports
+// ---------------------------------
+$vp-1920:                           1920px;
+$vp-993:                            993px;
+$vp-768:                            768px;
+
+// Typography
+// ---------------------------------
+
+$fz-default:                        12px;
+
+// font-weight: 400;
+$ff-manrope:                      "Manrope", "Arial", sans-serif;
+
+// font-weight: 600;
+$ff-manropesemibold:              "Manrope SemiBold", "Arial", sans-serif;
+
+// font-weight: 700;
+$ff-manropebold:                  "Manrope Bold", "Arial", sans-serif;
+
+// font-weight: 800;
+$ff-manropeextrabold:                  "Manrope ExtraBold", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
