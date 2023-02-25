@@ -1,9 +1,11 @@
 // Colors
 // ---------------------------------
-$color-default-black:               #3e3e3e;
+$color-default-black:               #2a2a2a;
 $color-default-white:               #ffffff;
-$color-white:                       #f7f7f7;
-$color-default-green:               #259609;
+$color-white:                       #efefef;
+$color-default-green:               #20c863;
+$color-default-red:                 #fd2016;
+$color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
 // ---------------------------------
@@ -16,6 +18,12 @@ $color-torch-red:                   #ff1553;
 $vp-1920:                           1920px;
 $vp-993:                            993px;
 $vp-768:                            768px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
 
 // Typography
 // ---------------------------------
@@ -32,10 +40,14 @@ $ff-manropesemibold:              "Manrope SemiBold", "Arial", sans-serif;
 $ff-manropebold:                  "Manrope Bold", "Arial", sans-serif;
 
 // font-weight: 800;
-$ff-manropeextrabold:                  "Manrope ExtraBold", "Arial", sans-serif;
+$ff-manropeextrabold:             "Manrope ExtraBold", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
 
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
+
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+$trans-600:                         0.6s $tf-default;

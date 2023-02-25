@@ -1,14 +1,14 @@
 .btn {
   display: inline-block;
-  padding: 20px 54px;
-  font-family: $ff-manropebold;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 19px;
+  padding: size-desktop(25px) size-desktop(90px) size-desktop(25px) size-desktop(54px);
+  font-family: $ff-manropeextrabold;
+  font-weight: 600;
+  font-size: size-desktop(16px);
+  line-height: size-desktop(24px);
+  letter-spacing: 0.04em;
   color: $color-default-white;
   background-color: transparent;
   border: none;
-  text-transform: uppercase;
   text-align: center;
   cursor: pointer;
   user-select: none;
@@ -23,76 +23,117 @@
 
     pointer-events: none;
   }
+
+  @include vp-992 {
+    font-size: size(10px);
+    line-height: size(15px);
+  }
 }
 
-.btn--all-programmes {
+.btn--advantages {
+  position: relative;
   width: 100%;
-  margin-top: 18px;
-  padding: 15px;
-  color: $color-default-green;
-  border: 1px solid rgba(37, 150, 9, 0.35);
-  border-radius: 3px;
-}
-
-.btn--all-programmes:hover {
-  background-color: $color-default-green;
-  color: $color-default-white;
-}
-
-.btn--all-programmes:active {
-  opacity: 0.5;
-}
-
-.btn--more-info {
-  max-width: 100%;
-  padding: 13px;
-  background-color: $color-default-green;
-  border-radius: 3px;
-}
-
-.btn--add-course {
-  position: relative;
-  display: none;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 1px;
-    background-color: $color-default-green;
-    transform: translate(-50%, -50%);
-    border-radius: 2px;
-  }
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(90deg);
-  }
-}
-
-.btn--pagination-show {
-  position: relative;
-  display: block;
-  margin: 5px auto;
-  padding: 25px;
-  color: $color-default-black;
+  background-color: $color-default-red;
+  border-radius: size-desktop(500px);
+  overflow-x: hidden;
 
   &::before {
     content: "";
     position: absolute;
-    top: 47%;
-    right: -10px;
-    width: 17px;
-    height: 18px;
+    top: 50%;
+    right: size-desktop(32px);
+    width: size-desktop(22px);
+    height: size-desktop(22px);
     transform: translate(-50%, -50%);
-    background-image: url("../img/svg/icon-refresh.svg");
+    background-image: url("../img/svg/arrow-button-calculation.svg");
     background-repeat: no-repeat;
+    transition: 0.3s;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: size-desktop(45px);
+    height: 100%;
+    transform: skewX(-45deg);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 3s linear infinite;
+  }
+
+  @include vp-992 {
+    min-height: size(60px);
+    padding: size(16px) size(43px);
+
+    &::before {
+      content: none;
+    }
+  }
+}
+
+@keyframes flareAnimation {
+  0% {
+      left: -150%;
+  }
+  100% {
+      left: 150%;
+  }
+}
+
+.btn--advantages-whatsapp {
+  padding: size-desktop(35px) size-desktop(33px) size-desktop(33px) size-desktop(60px);
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 1px solid $color-default-white;
+
+  &::before {
+    left: size-desktop(42px);
+    width: size-desktop(30px);
+    height: size-desktop(30px);
+    background-image: url("../img/svg/icon-whatsapp.svg");
+  }
+
+  @include vp-992 {
+    min-height: size(60px);
+    padding: size(20px) size(48px);
+  }
+}
+
+.btn--advantages-whatsapp span {
+  @include vp-992 {
+    color: $color-default-green;
+  }
+}
+
+.btn--advantages:hover {
+  opacity: 0.7;
+
+  &::before {
+    top: 53%;
+    rotate: 45deg;
+  }
+}
+
+.btn--advantages:active {
+  opacity: 0.4;
+}
+
+.btn--advantages-whatsapp:hover {
+  &::before {
+    top: 50%;
+    rotate: none;
+  }
+}
+
+.btn--form-send {
+  display: block;
+  width: 100%;
+  min-height: size-desktop(85px);
+  padding: size-desktop(15px) size-desktop(15px) size-desktop(14px);
+  font-family: $ff-manropesemibold;
+  font-weight: 600;
+  font-size: size-desktop(16px);
+  line-height: size-desktop(24px);
+  background-color: $color-default-red;
+  border-radius: size-desktop(500px);
 }
