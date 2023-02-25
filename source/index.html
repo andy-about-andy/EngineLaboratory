@@ -17,14 +17,16 @@
   <body>
     <div class="wrapper">
       <header>
-        <div class="container main-header">
+        <div class="container main-header main-header--nojs">
           <div class="main-header__wrap">
             <div class="main-header__top">
               <div class="main-header__logo-inner">
                 <a class="main-header__link-logo">
-                  <svg class="main-header__logo" aria-hidden="true" focusable="false" width="213" height="50">
-                    <use href="img/sprite.svg#icon-logo-desktop"></use>
-                  </svg>
+                  <picture>
+                    <source width="213" height="50" media="(min-width: 993px)" type="image/webp" srcset="img/icon-logo-desktop.webp 1x, img/icon-logo-desktop@2x.webp 2x">
+                    <source width="92" height="22" type="image/webp" srcset="img/icon-logo-mobile.webp 1x, img/icon-logo-mobile@2x.webp 2x">
+                    <img loading="lazy" width="213" height="50" src="img/icon-logo-desktop.png" srcset="img/icon-logo-desktop@2x.png 2x" alt="Логотип.">
+                  </picture>
                 </a>
                 <p class="main-header__logo-text">Ремонтируем двигатели<br>Hyundai и Kia с 2012 года</p>
               </div>
@@ -35,53 +37,65 @@
                     <source width="65" height="65" type="image/webp" srcset="img/icon-address-mobile.webp 1x, img/icon-address-mobile@2x.webp 2x">
                     <img loading="lazy" width="35" height="35" src="img/icon-address-desktop.png" srcset="img/icon-address-desktop@2x.png 2x" alt="Адрес автоцентра.">
                   </picture>
-                  <p class="main-header__address-text">Адрес автоцентра: Москва,</p>
-                  <p class="main-header__address-text main-header__address-text--mobile">Шоссейный проезд, с4 а/2</p>
+                  <div class="main-header__address-inner">
+                    <p class="main-header__address-text main-header__address-text--mobile">Адрес автоцентра: Москва,</p>
+                    <a class="main-header__address-text main-header__address-text--mobile main-header__address-text--link" href="https://yandex.by/maps/-/CCUGRKqDgB">Шоссейный проезд, с4 а/2</a>
+                  </div>
                 </div>
                 <div class="main-header__address-link-map">
                   <svg class="main-header__address-link-icon" aria-hidden="true" focusable="false" width="12" height="15">
                     <use href="img/sprite.svg#icon-anchor"></use>
                   </svg>
-                  <p class="main-header__address-link-text">Смотреть на карте</p>
-                </div>
-                <div class="main-header__calculation">
-                  <svg class="main-header__calculation-icon" aria-hidden="true" focusable="false" width="35" height="35">
-                    <use href="img/sprite.svg#icon-calculation-desktop"></use>
-                  </svg>
-                  <div class="main-header__calculation-text-wrap">
-                    <p class="main-header__calculation-text">Рассчитать стоимость</p>
-                    <p class="main-header__calculation-text">ремонта за 45 сек</p>
+                  <a class="main-header__address-link-text" href="https://yandex.by/maps/-/CCUGRKqDgB">Смотреть на карте</a>
+                  <div class="main-header__map">
+                    <iframe src="https://yandex.by/map-widget/v1/?ll=37.709291%2C55.706802&mode=poi&poi%5Bpoint%5D=37.709524%2C55.706873&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D166843519448&z=16.65" width="200" height="200" frameborder="1" allowfullscreen="true"></iframe>
                   </div>
                 </div>
+                <div class="main-header__calculation">
+                  <svg class="main-header__calculation-icon main-header__calculation-icon--desktop" aria-hidden="true" focusable="false" width="35" height="35">
+                    <use href="img/sprite.svg#icon-calculation-desktop"></use>
+                  </svg>
+                  <svg class="main-header__calculation-icon main-header__calculation-icon--mobile" aria-hidden="true" focusable="false" width="67" height="66">
+                    <use href="img/sprite.svg#icon-calculation-mobile"></use>
+                  </svg>
+                  <a class="main-header__calculation-text-wrap" href="#">
+                    <p class="main-header__calculation-text main-header__calculation-text--mobile">Рассчитать стоимость</p>
+                    <p class="main-header__calculation-text main-header__calculation-text--desktop">ремонта <span>за 45 сек</span></p>
+                  </a>
+                </div>
                 <div class="main-header__social">
-                  <p class="main-header__social-text main-header__social-text--desktop">Задайте вопрос,<br>мы сейчас онлайн</p>
-                  <div class="main-header__social-text-wrap">
+                  <picture>
+                    <source width="65" height="65" type="image/webp" srcset="img/icon-social-mobile.webp 1x, img/icon-social-mobile@2x.webp 2x">
+                    <img loading="lazy" width="65" height="65" src="img/icon-social-mobile.png" srcset="img/icon-social-mobile@2x.png 2x" alt="Иконка специалиста.">
+                  </picture>
+                  <div class="main-header__social-inner">
+                    <p class="main-header__social-text main-header__social-text--desktop">Задайте вопрос,<br>мы сейчас онлайн</p>
                     <p class="main-header__social-text main-header__social-text--mobile">Есть вопрос?</p>
-                    <p class="main-header__social-text main-header__social-text--mobile-bold">Задайте его нашему мастеру онлайн</p>
+                    <p class="main-header__social-text main-header__social-text--mobile main-header__social-text--mobile-text">Задайте его нашему мастеру&nbsp;онлайн</p>
                     <ul class="main-header__social-icon-list">
                       <li class="main-header__social-icon-item">
-                        <a class="main-header__social-link-whatsapp" href="#">
-                          <svg class="main-header__social-link main-header__social-link--desktop" aria-hidden="true" focusable="false" width="35" height="35">
+                        <a class="main-header__social-link main-header__social-link--whatsapp" href="#">
+                          <svg class="main-header__social-icon main-header__social-icon--desktop" aria-hidden="true" focusable="false" width="35" height="35">
                             <use href="img/sprite.svg#social-icon-whatsapp-desktop"></use>
                           </svg>
-                          <svg class="main-header__social-link main-header__social-link--mobile" aria-hidden="true" focusable="false" width="32" height="32">
+                          <svg class="main-header__social-icon main-header__social-icon--mobile" aria-hidden="true" focusable="false" width="32" height="32">
                             <use href="img/sprite.svg#social-icon-whatsapp-mobile"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="main-header__social-icon-item">
-                        <a class="main-header__social-link-telegram" href="#">
-                          <svg class="main-header__social-link main-header__social-link--desktop" aria-hidden="true" focusable="false" width="35" height="35">
+                        <a class="main-header__social-link main-header__social-link--telegram" href="#">
+                          <svg class="main-header__social-icon main-header__social-icon--desktop" aria-hidden="true" focusable="false" width="35" height="35">
                             <use href="img/sprite.svg#social-icon-telegram-desktop"></use>
                           </svg>
-                          <svg class="main-header__social-link main-header__social-link--mobile" aria-hidden="true" focusable="false" width="32" height="32">
+                          <svg class="main-header__social-icon main-header__social-icon--mobile" aria-hidden="true" focusable="false" width="32" height="32">
                             <use href="img/sprite.svg#social-icon-telegram-mobile"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="main-header__social-icon-item">
-                        <a class="main-header__social-link-viber" href="#">
-                          <svg class="main-header__social-link" aria-hidden="true" focusable="false" width="35" height="35">
+                        <a class="main-header__social-link main-header__social-link--viber" href="#">
+                          <svg class="main-header__social-icon" aria-hidden="true" focusable="false" width="35" height="35">
                             <use href="img/sprite.svg#social-icon-viber-desktop"></use>
                           </svg>
                         </a>
@@ -94,11 +108,11 @@
                 <address>
                   <ul class="main-header__contacts-list">
                     <li class="main-header__contacts-item">
-                      <p class="main-header__contacts">Звоните Пн-Сб 10:00 - 21:00</p>
+                      <p class="main-header__contacts-text">Звоните Пн-Сб 10:00 - 21:00</p>
                     </li>
                     <li class="main-header__contacts-item">
                       <a class="main-header__link-phone" href="tel:+79251033330">+7 (925) 103 33 30</a>
-                      <svg class="main-header__contacts-icon" aria-hidden="true" focusable="false" width="9" height="5">
+                      <svg class="main-header__contacts-icon main-header__contacts-icon--mobile" aria-hidden="true" focusable="false" width="9" height="5">
                         <use href="img/sprite.svg#arrow-phone-number"></use>
                       </svg>
                     </li>
@@ -112,10 +126,13 @@
                 </address>
               </div>
             </div>
-            <nav class="main-nav">
+            <nav class="main-nav main-nav--closed main-nav--nojs">
               <h2 class="visually-hidden">Навигация по сайту</h2>
+              <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню.</span>
+              </button>
               <ul class="main-nav__list">
-                <li class="main-nav__item">
+                <li class="main-nav__item main-nav__item--mobile">
                   <a class="main-nav__link" href="#">Главная</a>
                 </li>
                 <li class="main-nav__item">
@@ -154,48 +171,79 @@
       <main>
         <section class="advantages">
           <div class="container advantages__wrap">
-            <h1>Профессиональный ремонт <br>двигателей HYUNDAI и KIA <br>с гарантией 1 год за 4-7 дней</h1>
-            <span>в специализированном автосервисе полного цикла</span>
+            <h1>Профессиональный <span class="advantages__title">ремонт двигателей</span> HYUNDAI и KIA с <span class="advantages__title">гарантией&nbsp;1 год</span> за&nbsp;4-&nbsp;7&nbsp;дней</h1>
+            <span class="advantages__title-text">в специализированном автосервисе полного&nbsp;цикла</span>
             <div class="advantages__button">
               <div class="advantages__button-inner">
-                <a class="btn btn--advantages" href="#">Начать расчет стоимости ремонта вашего двигателя</a>
-                <svg class="advantages__button-icon" aria-hidden="true" focusable="false" width="22" height="22">
-                  <use href="img/sprite.svg#arrow-button-calculation"></use>
-                </svg>
+                <a class="btn btn--advantages" href="#">Начать расчет стоимости ремонта вашего&nbsp;двигателя</a>
               </div>
               <div class="advantages__button-inner">
-                <svg class="advantages__button-icon" aria-hidden="true" focusable="false" width="30" height="30">
-                  <use href="img/sprite.svg#icon-whatsapp"></use>
-                </svg>
-                <a class="btn btn--advantages btn--advantages-whatsapp" href="#">Узнайте стоимость по WhatsApp</a>
+                <a class="btn btn--advantages btn--advantages-whatsapp" href="#">Узнайте стоимость по <span>WhatsApp</span></a>
               </div>
             </div>
-            <div class="advantages__inner">
-              <h2 class="visually-hidden">Наши преимущества!</h2>
-              <ul class="advantages__list">
-                <li class="advantages__item">
-                  <p class="advantages__item-text">Без предоплаты.</p>
-                  <span>Оплата после ремонта</span>
-                </li>
-                <li class="advantages__item">
-                  <span class="advantages__item-text">Работаем официально</span>
-                  <span>с оформлением заказ-нарядов и чеков</span>
-                </li>
-                <li class="advantages__item">
-                  <p class="advantages__item-text">Оригинальные запчасти</p>
-                </li>
-                <li class="advantages__item">
-                  <span class="advantages__item-text">Лучшие цены на рынке</span>
-                  <span>благодаря прямым поставкам запчастей и собственному цеху механической обработки</span>
-                </li>
-              </ul>
+          </div>
+          <div class=" container advantages__inner">
+            <h2 class="visually-hidden">Наши преимущества!</h2>
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <p class="advantages__item-text">Без предоплаты.</p>
+                <span>Оплата после ремонта</span>
+              </li>
+              <li class="advantages__item advantages__item--mobile">
+                <span class="advantages__item-text">Работаем официально</span>
+                <span>с оформлением заказ-нарядов и чеков</span>
+              </li>
+              <li class="advantages__item">
+                <p class="advantages__item-text">Оригинальные запчасти</p>
+              </li>
+              <li class="advantages__item">
+                <span class="advantages__item-text">Лучшие цены на рынке</span>
+                <span>благодаря прямым поставкам запчастей и собственному цеху механической обработки</span>
+              </li>
+            </ul>
+          </div>
+          <div class="advantages__scroll-down">
+            <div class="advantages__scroll-down-inner">
+              <svg class="advantages__scroll-down-icon" aria-hidden="true" focusable="false" width="19" height="32">
+                <use href="img/sprite.svg#icon-mouse"></use>
+              </svg>
             </div>
           </div>
         </section>
       </main>
-      <!-- <footer>
+      <footer>
         <div class="container"></div>
-      </footer> -->
+      </footer>
+    </div>
+
+    <!-- Модалка -->
+    <div class="modal modal--preload" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Быстро оставить<br>заявку</p>
+          <p class="modal__text">Введите номер — позвоним вам в течение 5-10 минут в рабочее время</p>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <form class="form form--popup" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form__field">
+              <label class="form__text" for="number-phone-popup">Введите ваш номер телефона</label>
+              <input type="tel" id="number-phone-popup" name="number-phone" placeholder="+ 7 (_ _ _) _ _ _ - _ _ - _ _" pattern="^\+7[\(][0-9]{3}[\)]\s?[0-9]{3}-[0-9]{2}-[0-9]{2}" required data-mask-tel>
+            </div>
+            <div class="form__inner-popup">
+              <button class="btn btn--form-send" type="submit">Перезвоните мне</button>
+              <label class="form__assent">
+                <input class="visually-hidden form__assent-input" type="checkbox" name="согласие на обработку персональных данных" checked required>
+                <span class="form__assent-mark"></span>
+                <span class="form__assent-label">Нажимая кнопку вы соглашаетесь  с условиями Политики конфиденциальности</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>
