@@ -43,21 +43,18 @@
                   </div>
                 </div>
                 <div class="main-header__address-link-map">
-                  <svg class="main-header__address-link-icon" aria-hidden="true" focusable="false" width="12" height="15">
-                    <use href="img/sprite.svg#icon-anchor"></use>
-                  </svg>
+                  <img src="img/svg/icon-anchor.svg" width="12" height="15" alt="Иконка якорь.">
                   <a class="main-header__address-link-text" href="https://yandex.by/maps/-/CCUGRKqDgB">Смотреть на карте</a>
                   <div class="main-header__map">
                     <iframe src="https://yandex.by/map-widget/v1/?ll=37.709291%2C55.706802&mode=poi&poi%5Bpoint%5D=37.709524%2C55.706873&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D166843519448&z=16.65" width="200" height="200" frameborder="1" allowfullscreen="true"></iframe>
                   </div>
                 </div>
                 <div class="main-header__calculation">
-                  <svg class="main-header__calculation-icon main-header__calculation-icon--desktop" aria-hidden="true" focusable="false" width="35" height="35">
-                    <use href="img/sprite.svg#icon-calculation-desktop"></use>
-                  </svg>
-                  <svg class="main-header__calculation-icon main-header__calculation-icon--mobile" aria-hidden="true" focusable="false" width="67" height="66">
-                    <use href="img/sprite.svg#icon-calculation-mobile"></use>
-                  </svg>
+                  <picture>
+                    <source width="35" height="35" media="(min-width: 993px)" type="image/svg+xml" srcset="img/svg/icon-calculation-desktop.svg">
+                    <source width="67" height="66" type="image/svg+xml" srcset="img/svg/icon-calculation-mobile.svg">
+                    <img loading="lazy" width="35" height="35" src="img/svg/icon-calculation-desktop.svg" alt="Иконка расчёта стоимости.">
+                  </picture>
                   <a class="main-header__calculation-text-wrap" href="#">
                     <p class="main-header__calculation-text main-header__calculation-text--mobile">Рассчитать стоимость</p>
                     <p class="main-header__calculation-text main-header__calculation-text--desktop">ремонта <span>за 45 сек</span></p>
@@ -74,30 +71,29 @@
                     <p class="main-header__social-text main-header__social-text--mobile main-header__social-text--mobile-text">Задайте его нашему мастеру&nbsp;онлайн</p>
                     <ul class="main-header__social-icon-list">
                       <li class="main-header__social-icon-item">
-                        <a class="main-header__social-link main-header__social-link--whatsapp" href="#">
-                          <svg class="main-header__social-icon main-header__social-icon--desktop" aria-hidden="true" focusable="false" width="35" height="35">
-                            <use href="img/sprite.svg#social-icon-whatsapp-desktop"></use>
-                          </svg>
-                          <svg class="main-header__social-icon main-header__social-icon--mobile" aria-hidden="true" focusable="false" width="32" height="32">
-                            <use href="img/sprite.svg#social-icon-whatsapp-mobile"></use>
-                          </svg>
+                        <a class="main-header__social-link" href="#">
+                          <picture>
+                            <source width="35" height="35" media="(min-width: 993px)" type="image/svg+xml" srcset="img/svg/social-icon-whatsapp-desktop.svg">
+                            <source width="32" height="32" type="image/svg+xml" srcset="img/svg/social-icon-whatsapp-mobile.svg">
+                            <img loading="lazy" width="35" height="35" src="img/svg/social-icon-whatsapp-desktop.svg" alt="Иконка WhatsApp.">
+                          </picture>
                         </a>
                       </li>
-                      <li class="main-header__social-icon-item">
-                        <a class="main-header__social-link main-header__social-link--telegram" href="#">
-                          <svg class="main-header__social-icon main-header__social-icon--desktop" aria-hidden="true" focusable="false" width="35" height="35">
-                            <use href="img/sprite.svg#social-icon-telegram-desktop"></use>
-                          </svg>
-                          <svg class="main-header__social-icon main-header__social-icon--mobile" aria-hidden="true" focusable="false" width="32" height="32">
-                            <use href="img/sprite.svg#social-icon-telegram-mobile"></use>
-                          </svg>
+                      <li class="main-header__social-icon-item main-header__social-icon-item--mobile">
+                        <a class="main-header__social-link" href="#">
+                          <picture>
+                            <source width="35" height="35" media="(min-width: 993px)" type="image/svg+xml" srcset="img/svg/social-icon-telegram-desktop.svg">
+                            <source width="32" height="32" type="image/svg+xml" srcset="img/svg/social-icon-telegram-mobile.svg">
+                            <img loading="lazy" width="35" height="35" src="img/svg/social-icon-telegram-desktop.svg" alt="Иконка WhatsApp.">
+                          </picture>
                         </a>
                       </li>
                       <li class="main-header__social-icon-item">
                         <a class="main-header__social-link main-header__social-link--viber" href="#">
-                          <svg class="main-header__social-icon" aria-hidden="true" focusable="false" width="35" height="35">
-                            <use href="img/sprite.svg#social-icon-viber-desktop"></use>
-                          </svg>
+                          <picture>
+                            <source width="35" height="35" media="(min-width: 993px)" type="image/svg+xml" srcset="img/svg/social-icon-viber-desktop.svg">
+                            <img loading="lazy" width="35" height="35" src="img/svg/social-icon-viber-desktop.svg" alt="Иконка Viber.">
+                          </picture>
                         </a>
                       </li>
                     </ul>
@@ -110,17 +106,19 @@
                     <li class="main-header__contacts-item">
                       <p class="main-header__contacts-text">Звоните Пн-Сб 10:00 - 21:00</p>
                     </li>
-                    <li class="main-header__contacts-item">
+                    <li class="main-header__contacts-item main-header__contacts-item--phone-mobile">
                       <a class="main-header__link-phone" href="tel:+79251033330">+7 (925) 103 33 30</a>
-                      <svg class="main-header__contacts-icon main-header__contacts-icon--mobile" aria-hidden="true" focusable="false" width="9" height="5">
-                        <use href="img/sprite.svg#arrow-phone-number"></use>
-                      </svg>
+                      <picture>
+                        <source width="9" height="5" media="(min-width: 993px)" type="image/svg+xml" srcset="img/svg/arrow-phone-number.svg">
+                        <img loading="lazy" width="9" height="5" src="img/svg/arrow-phone-number.svg" alt="Иконка стрелки.">
+                      </picture>
                     </li>
-                    <li class="main-header__contacts-item">
-                      <a class="main-header__button" href="#">Заказать звонок</a>
-                      <svg class="main-header__contacts-icon" aria-hidden="true" focusable="false" width="6" height="6">
-                        <use href="img/sprite.svg#icon-phone"></use>
-                      </svg>
+                    <li class="main-header__contacts-item main-header__contacts-item--phone">
+                      <a class="main-header__button" href="#" data-open-modal="feedback">Заказать звонок</a>
+                      <picture>
+                        <source width="6" height="6" type="image/svg+xml" srcset="img/svg/icon-phone.svg">
+                        <img loading="lazy" width="6" height="6" src="img/svg/icon-phone.svg" alt="Иконка телефонной трубки.">
+                      </picture>
                     </li>
                   </ul>
                 </address>
@@ -178,7 +176,7 @@
                 <a class="btn btn--advantages" href="#">Начать расчет стоимости ремонта вашего&nbsp;двигателя</a>
               </div>
               <div class="advantages__button-inner">
-                <a class="btn btn--advantages btn--advantages-whatsapp" href="#">Узнайте стоимость по <span>WhatsApp</span></a>
+                <a class="btn btn--advantages btn--advantages-whatsapp" href="#">Узнайте стоимость по&nbsp;<span>WhatsApp</span></a>
               </div>
             </div>
           </div>
@@ -204,9 +202,10 @@
           </div>
           <div class="advantages__scroll-down">
             <div class="advantages__scroll-down-inner">
-              <svg class="advantages__scroll-down-icon" aria-hidden="true" focusable="false" width="19" height="32">
-                <use href="img/sprite.svg#icon-mouse"></use>
-              </svg>
+              <picture>
+                <source width="19" height="32" media="(min-width: 993px)" type="image/svg+xml" srcset="img/svg/icon-mouse.svg">
+                <img loading="lazy" width="19" height="32" src="img/svg/icon-mouse.svg" alt="Иконка мышь компьютерная.">
+              </picture>
             </div>
           </div>
         </section>
@@ -224,9 +223,13 @@
           <p class="modal__description">Быстро оставить<br>заявку</p>
           <p class="modal__text">Введите номер — позвоним вам в течение 5-10 минут в рабочее время</p>
           <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="20" height="20">
+          <picture>
+            <source width="20" height="20" media="(min-width: 993px)" type="image/svg+xml" srcset="img/svg/icon-close.svg">
+            <img loading="lazy" width="20" height="20" src="img/svg/icon-close.svg" alt="Кнопка закрытия уведомления.">
+          </picture>
+            <!-- <svg width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
+            </svg> -->
           </button>
           <form class="form form--popup" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__field">
@@ -238,13 +241,13 @@
               <label class="form__assent">
                 <input class="visually-hidden form__assent-input" type="checkbox" name="согласие на обработку персональных данных" checked required>
                 <span class="form__assent-mark"></span>
-                <span class="form__assent-label">Нажимая кнопку вы соглашаетесь  с условиями Политики конфиденциальности</span>
+                <span class="form__assent-label">Нажимая кнопку вы соглашаетесь  с условиями <span>Политики конфиденциальности</span></span>
               </label>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

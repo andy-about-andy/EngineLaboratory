@@ -104,6 +104,17 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+
+    & img {
+      width: size-desktop(20px);
+      height: size-desktop(20px);
+
+      @include vp-992 {
+        width: size(20px);
+        height: size(20px);
+
+      }
+    }
   }
 
   &--responsive {

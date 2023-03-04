@@ -1,23 +1,32 @@
 .form__text {
-  padding-left: 35px;
+  padding-left: size-desktop(35px);
   font-size: size-desktop(14px);
   line-height: size-desktop(19px);
   color: $color-default-white;
+
+  @include vp-992 {
+    padding-left: size(35px);
+    font-size: size(14px);
+    line-height: size(19px);
+  }
 }
 
 .form__field {
-  padding-top: 30px;
+  padding-top: size-desktop(30px);
+
+  @include vp-992 {
+    padding-top: size(30px);
+  }
 }
 
 .form__field input {
   width: 100%;
   min-height: size-desktop(85px);
+  padding: 0 size-desktop(47px);
   border-radius: size-desktop(73px);
   background-color: #fafafa;
-  box-shadow: inset 0 0 size-desktop(21px) rgba(255, 255, 255, 0.4);
 
   &::placeholder {
-    padding-left: 40px;
     font-family: $ff-manrope;
     font-style: normal;
     font-weight: 400;
@@ -27,29 +36,48 @@
     letter-spacing: 0.03em;
     color: #b0b0b1;
   }
+
+  @include vp-992 {
+    min-height: size(85px);
+    padding: 0 size(47px);
+    border-radius: size(73px);
+
+    &::placeholder {
+      font-size: size(18px);
+      line-height: size(24px);
+    }
+  }
 }
 
 .form__inner-popup {
   margin: size-desktop(25px) 0 0;
-}
 
-.form__assent-label {
-  margin-top: size-desktop(25px);
-  padding-left: size-desktop(34px);
-  font-size: size-desktop(14px);
-  line-height: size-desktop(19px);
-  color: $color-default-white;
+  @include vp-992 {
+    margin: size(25px) 0 0;
+  }
 }
 
 .form__assent-label {
   position: relative;
   display: block;
-  padding-left: size-desktop(26px);
+  margin-top: size-desktop(25px);
+  padding-left: size-desktop(34px);
   font-size: size-desktop(14px);
-  line-height: size-desktop(16px);
+  line-height: size-desktop(19px);
   color: $color-default-white;
   opacity: 0.8;
   cursor: pointer;
+
+  @include vp-992 {
+    margin-top: size(25px);
+    padding-left: size(34px);
+    font-size: size(14px);
+    line-height: size(19px);
+  }
+}
+
+.form__assent-label span {
+  color: $color-default-red;
 }
 
 .form__assent-label::before {
@@ -61,23 +89,43 @@
   height: size-desktop(20px);
   background-color: $color-default-red;
   border-radius: size-desktop(5px);
+
+  @include vp-992 {
+    bottom: size(10px);
+    width: size(20px);
+    height: size(20px);
+    border-radius: size(5px);
+  }
 }
 
 input[type="checkbox"]:checked + .form__assent-mark::before {
   position: absolute;
   content: "";
   z-index: 5;
-  bottom: size-desktop(-16px);
+  bottom: size-desktop(-20px);
   left: size-desktop(6px);
   width: size-desktop(8px);
   height: size-desktop(6px);
   background-image: url("../img/svg/check-mark-form.svg");
+  background-size: size-desktop(8px) size-desktop(6px);
   background-repeat: no-repeat;
   background-position: center;
+
+  @include vp-992 {
+    bottom: size(-20px);
+    left: size(6px);
+    width: size(8px);
+    height: size(6px);
+    background-size: size(8px) size(6px);
+  }
 }
 
 .form__assent-input:focus ~ .form__assent-label::before {
-  border: 2px solid $color-default-black;
+  border: size-desktop(2px) solid $color-default-black;
+
+  @include vp-992 {
+    border: size(2px) solid $color-default-black;
+  }
 }
 
 .form__assent-mark {

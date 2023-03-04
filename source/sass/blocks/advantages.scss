@@ -11,16 +11,6 @@
     background-image: url("../img/background-desktop@2x.webp");
   }
 
-  @include vp-992 {
-    min-height: size(511px);
-    height: size(511px);
-    background-image: url("../img/background-mobile.webp");
-
-    @include retina {
-      background-image: url("../img/background-mobile@2x.webp");
-    }
-  }
-
   &:before {
     position: absolute;
     content: "";
@@ -32,7 +22,16 @@
     background-color: $color-white;
   }
 
+
   @include vp-992 {
+    min-height: size(511px);
+    height: size(511px);
+    background-image: url("../img/background-mobile.webp");
+
+    @include retina {
+      background-image: url("../img/background-mobile@2x.webp");
+    }
+
     &:before {
       content: none;
     }
@@ -71,7 +70,7 @@
 }
 
 .advantages__title {
-  font-family: $ff-manropebold;
+  font-family: $ff-manrope;
   font-weight: 700;
 }
 
@@ -139,9 +138,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: size-desktop(13px);
+    width: size-desktop(11px);
     height: size-desktop(10px);
     background-image: url("../img/svg/check-mark.svg");
+    background-size: size-desktop(11px) size-desktop(10px);
     background-repeat: no-repeat;
   }
 
@@ -164,6 +164,12 @@
     padding-top: size(16px);
     color: #282828;
 
+    &::before {
+      width: size(14px);
+      height: size(10px);
+      background-size: size(13px) size(10px);
+    }
+
     &::after {
       content: none;
     }
@@ -172,15 +178,15 @@
 
 .advantages__item-text {
   margin: 0;
-  font-family: $ff-manropeextrabold;
-  font-weight: 700;
+  font-family: $ff-manrope;
+  font-weight: 800;
 }
 
 .advantages__inner {
   padding: 0 size-desktop(60px);
 
   @include vp-992 {
-    padding: size-desktop(25px) size-desktop(22px) 0;
+    padding: size(25px) size(22px) 0;
     &::after {
       content: none;
     }
@@ -226,5 +232,15 @@
 .advantages__item--mobile {
   @include vp-992 {
     order: 4;
+  }
+}
+
+.advantages__scroll-down-inner img {
+  display: block;
+  width: size-desktop(19px);
+  height: size-desktop(32px);
+
+  @include vp-992 {
+    display: none;
   }
 }
