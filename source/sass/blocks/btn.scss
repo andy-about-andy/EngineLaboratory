@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   padding: size-desktop(25px) size-desktop(90px) size-desktop(25px) size-desktop(54px);
-  font-family: $ff-manropeextrabold;
+  font-family: $ff-manrope;
   font-weight: 600;
   font-size: size-desktop(16px);
   line-height: size-desktop(24px);
@@ -32,6 +32,9 @@
 
 .btn--advantages {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   background-color: $color-default-red;
   border-radius: size-desktop(500px);
@@ -42,12 +45,13 @@
     position: absolute;
     top: 50%;
     right: size-desktop(32px);
-    width: size-desktop(22px);
-    height: size-desktop(22px);
+    width: size-desktop(23px);
+    height: size-desktop(23px);
     transform: translate(-50%, -50%);
     background-image: url("../img/svg/arrow-button-calculation.svg");
+    background-size: size-desktop(23px) size-desktop(23px);
     background-repeat: no-repeat;
-    transition: 0.3s;
+    transition: $trans-default;
   }
 
   &::after {
@@ -68,6 +72,11 @@
 
     &::before {
       content: none;
+    }
+
+    &::after {
+      content: "";
+      width: size(45px);
     }
   }
 }
@@ -91,6 +100,7 @@
     width: size-desktop(30px);
     height: size-desktop(30px);
     background-image: url("../img/svg/icon-whatsapp.svg");
+    background-size: size-desktop(30px) size-desktop(30px);
   }
 
   @include vp-992 {
@@ -126,14 +136,49 @@
 }
 
 .btn--form-send {
+  position: relative;
   display: block;
   width: 100%;
   min-height: size-desktop(85px);
   padding: size-desktop(15px) size-desktop(15px) size-desktop(14px);
-  font-family: $ff-manropesemibold;
+  font-family: $ff-manrope;
   font-weight: 600;
   font-size: size-desktop(16px);
   line-height: size-desktop(24px);
   background-color: $color-default-red;
   border-radius: size-desktop(500px);
+  overflow-x: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: size-desktop(45px);
+    height: 100%;
+    transform: skewX(-45deg);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 3s linear infinite;
+  }
+
+  @include vp-992 {
+    min-height: size(85px);
+    padding: size(15px) size(15px) size(14px);
+    font-size: size(16px);
+    line-height: size(24px);
+    border-radius: size(500px);
+
+    &::after {
+      content: "";
+      width: size(45px);
+    }
+  }
+}
+
+.btn--form-send:hover {
+  opacity: 0.7;
+}
+
+.btn--form-send:active {
+  opacity: 0.4;
 }

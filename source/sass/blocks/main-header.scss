@@ -1,12 +1,18 @@
 .main-header {
   padding-top: size-desktop(27px);
 
- @include vp-992 {
+  @include vp-992 {
     position: fixed;
     z-index: 10;
     padding-top: size(12px);
+    transition: $trans-default;
+
+    &.is-active {
+      background-color: $color-default-black;
+    }
   }
 }
+
 
 .main-header__wrap {
   position: relative;
@@ -152,7 +158,7 @@
   min-width: size-desktop(120px);
   margin: 0 0 0 size-desktop(10px);
   padding-bottom: size-desktop(4px);
-  font-family: $ff-manropebold;
+  font-family: $ff-manrope;
   font-weight: 700;
   font-size: size-desktop(11px);
   line-height: size-desktop(15px);
@@ -211,7 +217,7 @@
   position: relative;
   display: block;
   margin: 0;
-  font-family: $ff-manropebold;
+  font-family: $ff-manrope;
   font-weight: 700;
   font-size: size-desktop(11px);
   line-height: size-desktop(19px);
@@ -251,7 +257,7 @@
   @include vp-992 {
     position: relative;
     display: block;
-    font-family: $ff-manropeextrabold;
+    font-family: $ff-manrope;
     font-weight: 800;
 
     &::after {
@@ -261,7 +267,7 @@
       left: 0;
       width: 100%;
       height: 0;
-      border-bottom: size-desktop(2px) dotted $color-default-red;
+      border-bottom: size(2px) dotted $color-default-red;
       transition: 0.3s;
     }
   }
@@ -331,6 +337,7 @@
   @include vp-992 {
     display: flex;
     justify-content: start;
+    gap: size(6px);
     padding-top: size(8px);
   }
 }
@@ -366,6 +373,37 @@
   &:last-child {
     margin: 0;
   }
+
+  @include vp-992 {
+    margin-bottom: size(8px);
+  }
+}
+
+.main-header__contacts-item--phone-mobile {
+  @include vp-992 {
+    margin-bottom: size(5px);
+  }
+}
+
+.main-header__contacts-item img {
+  display: block;
+  width: size-desktop(9px);
+  height: size-desktop(5px);
+
+  @include vp-992 {
+    display: none;
+  }
+}
+
+.main-header__contacts-item--phone img {
+  display: block;
+  width: size-desktop(6px);
+  height: size-desktop(6px);
+
+  @include vp-992 {
+    width: size(6px);
+    height: size(6px);
+  }
 }
 
 .main-header__contacts-text {
@@ -379,7 +417,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: size-desktop(4px);
+    top: size-desktop(2px);
     left: size-desktop(3px);
     width: size-desktop(4px);
     height: size-desktop(4px);
@@ -389,18 +427,22 @@
 
   @include vp-992 {
     padding-left: size(8px);
+    padding-left: size(8px);
     font-size: size(6px);
+    line-height: size(10px);
 
     &::before {
       top: size(3px);
       left: 0;
+      width: size(4px);
+      height: size(4px);
     }
   }
 }
 
 .main-header__link-phone {
   padding-right: size-desktop(10px);
-  font-family: $ff-manropebold;
+  font-family: $ff-manrope;
   font-weight: 700;
   font-style: normal;
   font-size: size-desktop(20px);
@@ -410,12 +452,6 @@
     font-size: size(12px);
     line-height: size(10px);
     color: $color-default-white;
-  }
-}
-
-.main-header__contacts-icon--mobile {
-  @include vp-992 {
-    display: none;
   }
 }
 
@@ -442,8 +478,14 @@
   @include vp-992 {
     padding-right: size(3px);
     font-size: size(6px);
-    line-height: size(18px);
+    line-height: size(16px);
     color: $color-default-white;
+
+    &::after {
+      content: "";
+      width: 106%;
+      border-bottom: size(2px) dotted $color-default-red;
+    }
   }
 }
 
@@ -457,7 +499,6 @@
 }
 
 .main-header__social-link {
-  display: block;
   width: size-desktop(35px);
   height: size-desktop(35px);
 
@@ -475,8 +516,7 @@
   opacity: 0.4;
 }
 
-.main-header__social-text--mobile,
-.main-header__social-icon--mobile {
+.main-header__social-text--mobile {
   display: none;
 
   @include vp-992 {
@@ -496,36 +536,31 @@
   }
 }
 
-
-.main-header__social-icon--desktop {
+.main-header__social-link img {
   display: block;
+  width: size-desktop(35px);
+  height: size-desktop(35px);
 
+  @include vp-992 {
+    width: size(32px);
+    height: size(32px);
+  }
+}
+
+.main-header__social-link--viber img {
   @include vp-992 {
     display: none;
   }
 }
 
-.main-header__social-link--viber {
-  display: block;
+.main-header__calculation img {
+  width: size-desktop(35px);
+  height: size-desktop(35px);
 
   @include vp-992 {
-    display: none;
-  }
-}
+    width: size(67px);
+    height: size(66px);
 
-.main-header__calculation-icon--desktop {
-  display: block;
-
-  @include vp-992 {
-    display: none;
-  }
-}
-
-.main-header__calculation-icon--mobile {
-  display: none;
-
-  @include vp-992 {
-    display: block;
   }
 }
 
@@ -541,7 +576,7 @@
 }
 
 .main-header__social-text--mobile-text {
-  font-family: $ff-manropeextrabold;
+  font-family: $ff-manrope;
   font-weight: 800;
 }
 
@@ -556,7 +591,7 @@
 .main-header__address-text--link {
   @include vp-992 {
     position: relative;
-    font-family: $ff-manropeextrabold;
+    font-family: $ff-manrope;
     font-weight: 800;
     line-height: size(18px);
     letter-spacing: normal;
@@ -600,7 +635,7 @@
   }
 }
 
-.main-header__address-link-icon {
+.main-header__address-link-map img {
   width: size-desktop(12px);
   height: size-desktop(15px);
 
