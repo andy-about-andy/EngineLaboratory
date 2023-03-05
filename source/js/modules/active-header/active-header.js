@@ -1,11 +1,9 @@
-const header = document.querySelector('.main-header');
-
 let valueScroll = 0;
 const defaultOffset = 50;
 
+const header = document.querySelector('.main-header');
 const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 const containHide = () => header.classList.contains('is-active');
-
 
 const activeHeader = () => {
   window.addEventListener('scroll', () => {

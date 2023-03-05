@@ -13,7 +13,6 @@
   }
 }
 
-
 .main-header__wrap {
   position: relative;
   display: flex;
@@ -296,6 +295,7 @@
 
   @include vp-992 {
     display: flex;
+    justify-content: start;
     min-width: size(237px);
   }
 }
@@ -305,6 +305,9 @@
 
   @include vp-992 {
     display: block;
+    max-width: size(65px);
+    width: size(65px);
+    height: size(65px);
   }
 }
 
@@ -630,6 +633,7 @@
   height: size-desktop(35px);
 
   @include vp-992 {
+    max-width: size(65px);
     width: size(65px);
     height: size(65px);
   }
@@ -643,4 +647,36 @@
     width: size(12px);
     height: size(15px);
   }
+}
+
+// no-js
+// --------------------------------
+.main-header--nojs {
+  @include vp-992 {
+    position: static;
+    display: block;
+  }
+}
+
+.main-header--nojs .main-header__top {
+  @include vp-992 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main-header--nojs .main-header__top-inner {
+  @include vp-992 {
+    display: block;
+  }
+}
+
+.main-header--nojs .main-header__contacts-text,
+.main-header--nojs .main-header__link-phone,
+.main-header--nojs .main-header__button {
+  color: $color-default-black;
+}
+
+.main-header--nojs .main-header__contacts {
+  padding-top: size(20px);
 }

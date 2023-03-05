@@ -5,7 +5,7 @@
 const eventCallback = function (evt) {
   let el = evt.target,
   pattern = el.dataset.phonePattern,
-  matrixDefault = "+7(___) ___-__-__",
+  matrixDefault = "+ 7 (___) ___-__-__",
   matrix = pattern ? pattern : matrixDefault,
   i = 0,
   def = matrix.replace(/\D/g, ""),
