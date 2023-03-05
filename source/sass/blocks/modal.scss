@@ -5,23 +5,18 @@
   bottom: 0;
   left: 0;
   z-index: 100;
-
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-
   background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
-
   transition: opacity $trans-modal,
     transform $trans-modal,
     visibility $trans-modal;
-
   pointer-events: none;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 
@@ -31,7 +26,6 @@
 
   &__wrapper {
     position: relative;
-
     display: flex;
     flex-shrink: 0;
     justify-content: center;
@@ -49,29 +43,30 @@
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     cursor: pointer;
   }
 
   &__content {
     position: relative;
-
     width: size-desktop(500px);
     padding: size-desktop(45px) size-desktop(68px) size-desktop(75px);
-
     background-image: url("../img/background-form.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
+    border-radius: size-desktop(3px);
 
     @media (min-width: $vp-993) and (min-resolution: $retina-dppx) {
       background-image: url("../img/background-form@2x.webp");
     }
-    border-radius: size-desktop(3px);
 
+    @include vp-992 {
+      width: size(350px);
+      padding: size(25px) size(10px) size(35px);
+      border-radius: size(3px);
+    }
   }
 
   &__description {
@@ -81,6 +76,11 @@
     line-height: size-desktop(42px);
     text-align: center;
     color: $color-default-white;
+
+    @include vp-992 {
+      font-size: size(20px);
+      line-height: size(25px);
+    }
   }
 
   &__text {
@@ -89,6 +89,11 @@
     line-height: size-desktop(28px);
     text-align: center;
     color: $color-default-white;
+
+    @include vp-992 {
+      font-size: size(13px);
+      line-height: size(18px);
+    }
   }
 
   &__close-btn {
@@ -96,11 +101,9 @@
     top: size-desktop(18px);
     right: size-desktop(16px);
     z-index: 1;
-
     width: size-desktop(40px);
     height: size-desktop(40px);
     padding: 0;
-
     background: $color-transparent;
     border: none;
     cursor: pointer;
@@ -112,8 +115,14 @@
       @include vp-992 {
         width: size(20px);
         height: size(20px);
-
       }
+    }
+
+    @include vp-992 {
+      top: size(10px);
+      right: size(10px);
+      width: size(20px);
+      height: size(20px);
     }
   }
 
@@ -146,7 +155,6 @@
     transform: scale(1);
     visibility: visible;
     opacity: 1;
-
     pointer-events: auto;
   }
 }

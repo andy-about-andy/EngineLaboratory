@@ -15,16 +15,20 @@
   padding-top: size-desktop(30px);
 
   @include vp-992 {
-    padding-top: size(30px);
+    padding-top: size(20px);
   }
 }
 
 .form__field input {
   width: 100%;
-  min-height: size-desktop(85px);
+  height: size-desktop(85px);
   padding: 0 size-desktop(47px);
+  font-size: size-desktop(18px);
+  line-height: size-desktop(24px);
+  letter-spacing: 0.03em;
   border-radius: size-desktop(73px);
   background-color: #fafafa;
+  border-style: none;
 
   &::placeholder {
     font-family: $ff-manrope;
@@ -38,8 +42,10 @@
   }
 
   @include vp-992 {
-    min-height: size(85px);
-    padding: 0 size(47px);
+    height: size(55px);
+    padding: 0 size(35px);
+    font-size: size(18px);
+    line-height: size(24px);
     border-radius: size(73px);
 
     &::placeholder {
@@ -71,8 +77,8 @@
   @include vp-992 {
     margin-top: size(25px);
     padding-left: size(34px);
-    font-size: size(14px);
-    line-height: size(19px);
+    font-size: size(12px);
+    line-height: size(15px);
   }
 }
 
@@ -83,15 +89,16 @@
 .form__assent-label::before {
   content: "";
   position: absolute;
-  bottom: size-desktop(10px);
-  left: 0;
+  top: 50%;
+  left: size-desktop(10px);
   width: size-desktop(20px);
   height: size-desktop(20px);
   background-color: $color-default-red;
   border-radius: size-desktop(5px);
+  transform: translate(-50%, -50%);
 
   @include vp-992 {
-    bottom: size(10px);
+    left: size(10px);
     width: size(20px);
     height: size(20px);
     border-radius: size(5px);
@@ -102,18 +109,18 @@ input[type="checkbox"]:checked + .form__assent-mark::before {
   position: absolute;
   content: "";
   z-index: 5;
-  bottom: size-desktop(-20px);
-  left: size-desktop(6px);
+  top: 50%;
+  left: size-desktop(10px);
   width: size-desktop(8px);
   height: size-desktop(6px);
   background-image: url("../img/svg/check-mark-form.svg");
   background-size: size-desktop(8px) size-desktop(6px);
   background-repeat: no-repeat;
   background-position: center;
+  transform: translate(-50%, -50%);
 
   @include vp-992 {
-    bottom: size(-20px);
-    left: size(6px);
+    left: size(10px);
     width: size(8px);
     height: size(6px);
     background-size: size(8px) size(6px);
@@ -128,6 +135,6 @@ input[type="checkbox"]:checked + .form__assent-mark::before {
   }
 }
 
-.form__assent-mark {
+.form__assent {
   position: relative;
 }

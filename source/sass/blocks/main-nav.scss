@@ -151,11 +151,15 @@
     display: flex;
     top: size(-12px);
     left: size(-22px);
-    width: 100%;
-    max-width: size(732px);
+    width: 100vw;
+    max-width: size(992px);
     min-width: size(320px);
     height: 100vh;
     border-top: size(89px) solid transparent;
     background-color: $color-default-white;
   }
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
 }
